@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppyKart</title>
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+    <script src="Script.js"></script>
+
+    <!-- ======================================================== HEADER ======================================================== -->
+    <header>
+        <div id="MyHeader">
+            <nav id="navbar">
+                <div class="logo"> <a href="index.html"><span>SHOPPY</span>KART</a> </div>
+                <div id="menu">
+                    <a href="#" class="active">HOME</a>
+                    <a href="#">ABOUT</a>
+                    <div class="dropdown">
+                        <a href="#">PRODUCTS &nbsp; <i class="fas fa-chevron-down"></i></a>
+                        <div>
+                            <ul>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Product Single</a></li>
+                                <li><a href="cart.html">Cart Page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#">PAGES &nbsp; <i class="fas fa-chevron-down"></i></a>
+                        <div>
+                            <ul>
+                                <li><a href="#">Blog Page</a></li>
+                                <li><a href="#">Blog Single</a></li>
+                                <li><a href="#">Elements</a></li>
+                                <li><a href="#">Error Page</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#">CONTACT</a>
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+                <div class="actions">
+                    <button class="btn"><i class="fas fa-user"></i> Login</button>
+                    <button class="btn count_btn"><i class="fas fa-lock"></i> <span id="count">0</span> Cart</button>
+                    <button class="dark-mode" onclick="toggleTheme()"><i class="fal fa-moon"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- ======================================================== /HEADER ======================================================== -->
+     
+    <!-- ======================================================== SLIDER ======================================================== -->
+    <section id="slider">
+        <button id="left_btn"> <i class="fas fa-chevron-left"></i> </button>
+        <button id="right_btn"> <i class="fas fa-chevron-right"></i> </button>
+    </section>
+    <!-- ======================================================== /SLIDER ======================================================== -->
+
+    <!-- ======================================================== FREE-SHIPPING ======================================================== -->
+    <section id="free_shoping_section">
+        <div id="free_shoping_section_wrap">
+            <div>Free Shipping For You Till Midnight</div>
+            <i class="fas fa-shipping-fast"></i>
+        </div>
+    </section>
+    <!-- ======================================================== /FREE-SHIPPING ======================================================== -->
+
+    <!-- ======================================================== CARDS ======================================================== -->
+    <section id="card_section">
+        <div id="card_wrap">
+            <div class="card" id="card1"></div>
+            <div class="card_content_wrapper card_con1">
+                Platform Velvet <br>
+                Sandals <br>
+                <button> <a href="#">Shop Now &nbsp; <i class="fa fa-arrow-right"></i> </a> </button> 
+            </div>
+            <div class="card" id="card2"></div>
+            <div class="card_content_wrapper card_con2">
+                Pebbled Weekend <br>
+                Bag <br>
+                <button> <a href="#">Shop Now &nbsp; <i class="fa fa-arrow-right"></i> </a> </button> 
+            </div>
+        </div>
+    </section>
+    <!-- ======================================================== /CARDS ======================================================== -->
+
+    <!-- ======================================================== PRODUCT SECTION ======================================================== -->
+    <!-- ******************************************************** PRODUCT HEADER ******************************************************** -->
+    <section id="product_heading_section">
+        <div id="product_heading">
+            <div>Shop With Us</div>
+            <div>Handpicked Favourites just for you</div>
+        </div>
+    </section>
+    <!-- ******************************************************** /PRODUCT HEADER ******************************************************** -->
+    <!-- ******************************************************** PRODUCT COLLECTION ******************************************************** -->
+    <section id="product_section">
+        <div id="product_collection">
+            <div class="product_item">
+                <a href="#">
+                    <div class="product_image_div">
+                        <img src="Images/d1.jpg" alt="" class="product_image">
+                        <div class="product_image_btns">
+                            <div class="view_product_div"> <a class="fa fa-eye eye_btn" href="cart.html"></a> </div>
+                            <div class="add_to_cart_div"> <a class="add_to_cart" href="cart.html">Add to Cart</a> </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="product_name_div"> <a class="product_name" href="cart.html">Checkered Casual Shirt</a> </div>
+                <div class="product_price">
+                    <span> <del>$975.00</del> </span> &nbsp;<span>$899.99</span>
+                </div>
+            </div>
+        </div>
+        <!-- ******************************************************** /PRODUCT COLLECTION ******************************************************** -->
+        <!-- ******************************************************** ADD THE PRODUCT ******************************************************** -->
+        <div id="new_product_panel_div"><button id="new_product_panel" onclick="addProduct()">CLICK HERE TO ADD NEW PRODUCT</button></div>
+        <!-- <div id="product_details">
+
+        </div>
+        <div id="btn_container">
+            <div id="vertical-center">
+                <button onclick="addProduct()">Add Product</button>
+            </div>
+        </div> -->
+    </section>
+    <!-- ******************************************************** /ADD THE PRODUCT ******************************************************** -->
+    <!-- ======================================================== /PRODUCT SECTION ======================================================== -->
+    
+    <!-- ======================================================== SUBSCRIPTION ======================================================== -->
+    <section id="subscription_section">
+        <div id="subscription_section_div">
+            <div id="envelope"> <i class="far fa-envelope"></i> </div>
+            <div id="subscription_heading">Get On The List</div>
+            <div id="subscription_para">Shop Exclusive Promos & SAVE 20% on Your First Order</div>
+            <form action="post">
+                <div id="subscription_email_div">
+                    <input id="subscription_email" value="" type="email" name="Email" placeholder="Your email here" required autocomplete="off" pattern="[A-Za-z0-9.]{3,10}@gmail\.com">
+                    <button id="subscription_email_btn" for="Email" type="submit">Subscribe</button>
+                </div>
+            </form>
+            <div id="terms_and_policy">By entering your email, you are accepting our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</div>
+        </div>
+    </section>
+    <!-- ======================================================== /SUBSCRIPTION ======================================================== -->
+
+    <!-- ======================================================== FOOTER ======================================================== -->
+    <footer>
+        
+    </footer>
+    <!-- ======================================================== /FOOTER ======================================================== -->
+
+    <!-- ======================================================== MOVETOP ======================================================== -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    <!-- ======================================================== /MOVETOP ======================================================== -->
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

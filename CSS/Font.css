@@ -1,0 +1,59 @@
+@font-face {
+    font-family: MyLight;
+    src: url(../Fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: MyMedium;
+    src: url(../Fonts/OpenSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: MyRegular;
+    src: url(../Fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: MySemiBold;
+    src: url(../Fonts/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: MyVariableFont;
+    src: url(../Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: MyCondensed-Bold;
+    src: url(../Fonts/OpenSans_Condensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: MyCondensed-ExtraBold;
+    src: url(../Fonts/OpenSans_Condensed-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: MyCondensed-Italic;
+    src: url(../Fonts/OpenSans_Condensed-Italic.ttf);
+}
+
+@font-face {
+    font-family: MyCondensed-Light;
+    src: url(../Fonts/OpenSans_Condensed-Light.ttf);
+}
+
+@font-face {
+    font-family: MyCondensed-Medium;
+    src: url(../Fonts/OpenSans_Condensed-Medium.ttf);
+}
+
+@font-face {
+    font-family: MyCondensed-Regular;
+    src: url(../Fonts/OpenSans_Condensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: MySemiCondensed-SemiBold;
+    src: url(../Fonts/OpenSans_SemiCondensed-SemiBold.ttf);
+}
