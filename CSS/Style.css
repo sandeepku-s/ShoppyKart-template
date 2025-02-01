@@ -26,8 +26,7 @@ body {
     --box-shadow: 0 25px 90px 0 #04020008;
     --bg-grey: #f7f6f6;
     --bg-lightgrey: #f1f3f8;
-    --footer-bg: #060500;
-    --footer-bglight: #0e0e0e;
+    --footer-bg: #0e0e0e;
 }
 
 body a, button, .btn {
@@ -84,6 +83,34 @@ header {
     position: relative;
     font-family: MyCondensed-Regular;
     font-weight: normal;
+}
+
+#navbar #menu #search_bar {
+    outline: 0px;
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--font-color);
+    background-color: var(--bg-lightgrey);
+    padding: 0px 10px;
+    display: none;
+}
+
+#navbar #menu #search_bar:focus {
+    border: 1px solid var(--primary-color);
+}
+
+#navbar #menu #search_bar:focus::placeholder {
+    color: var(--primary-color);
+}
+
+#navbar #menu #search_btn {
+    height: 30px;
+    border: 0px;
+    background-color: transparent;
+    font-size: 15px;
+    margin: 0px;
+    font-weight: lighter;
 }
 
 #navbar #menu i {
@@ -683,14 +710,170 @@ header {
 /* ======================================================== /SUBSCRIPTION ======================================================== */
 
 /* ======================================================== FOOTER ======================================================== */
+#Footer {
+    padding: 60px;
+    background-color: var(--footer-bg);
+}
+
+#Footer #Footer_div {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+#Footer #Footer_div #Footer_text {
+    width: 600px;
+    text-align: left;
+    font-family: MyCondensed-Bold;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--bg-color);
+}
+
+#Footer #Footer_div #Footer_link_div {
+	display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	align-content: space-evenly;
+    justify-content: space-around;
+    text-align: left;
+    color: var(--font-color);
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link {
+    text-align: left;
+	height: 300px;
+    width: 250px;
+    padding: 30px 0px;
+    margin: 10px;
+    font-family: MyCondensed-Regular;
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link h3 {
+    margin-bottom: 10px;
+    color: var(--bg-color);
+    font-size: 30px;
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link ul {
+    list-style: none;
+    padding: 0px;
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link ul li {
+    margin: 5px 0px;
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link ul li a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link ul li a:hover {
+    color: var(--bg-color);
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link p {
+    line-height: 1.6;
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link p a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link p a:hover {
+    color: var(--bg-color);
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link table tr th a {
+    text-decoration: none;
+    color: var(--bg-color);
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+#Footer #Footer_div #Footer_link_div .Footer_link table tr th a:hover {
+    color: var(--third-color);
+}
+
+#Footer_break {
+    width: 100%;
+    height: 1px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: var(--bg-color);
+}
 /* ======================================================== /FOOTER ======================================================== */
+
+/* ======================================================== COPYRIGHT ======================================================== */
+#copyright_footer {
+    padding: 20px 0px;
+    background-color: var(--footer-bg);
+    color: var(--bg-color);
+    font-family: MyCondensed-Regular;
+    color: var(--font-color);
+}
+
+#copyright_footer div {
+    width: 1150px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#copyright_footer div div:nth-child(1) {
+    width: 600px;
+    height: 40px;
+    float: left;
+    padding: 10px;
+}
+
+#copyright_footer div div:nth-child(1) a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s;
+}
+
+#copyright_footer div div:nth-child(1) a:hover {
+    font-weight: bolder;
+}
+
+#copyright_footer div div:nth-child(2) {
+    width: 400px;
+    height: 40px;
+    float: right;
+}
+
+#copyright_footer div div:nth-child(2) a {
+    text-decoration: none;
+    color: var(--bg-color);
+    font-size: 20px;
+}
+
+#copyright_footer div div:nth-child(2) a span {
+    width: 40px;
+    height: 40px;
+    margin: 0px 10px;
+    padding: 10px;
+    float: right;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: all 0.3s;
+}
+
+#copyright_footer div div:nth-child(2) a span:hover {
+    background-color: var(--third-color);
+    font-weight: bold;
+}
+/* ======================================================== /COPYRIGHT ======================================================== */
 
 /* ======================================================== MOVETOP ======================================================== */
 #movetop {
     width: 40px;
     height: 40px;
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     right: 10px;
     background-color: var(--primary-color);
     color: var(--bg-color);
