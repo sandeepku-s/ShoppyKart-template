@@ -26,7 +26,7 @@
                         <a href="#">PRODUCTS &nbsp; <i class="fas fa-chevron-down"></i></a>
                         <div>
                             <ul>
-                                <li><a href="#">Products</a></li>
+                                <li><a href="#product_heading_section">Products</a></li>
                                 <li><a href="#">Product Single</a></li>
                                 <li><a href="cart.html">Cart Page</a></li>
                             </ul>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="actions">
                     <button class="btn"><i class="fas fa-user"></i> Login</button>
-                    <button class="btn count_btn"><i class="fas fa-lock"></i> <span id="count">0</span> Cart</button>
+                    <a href="cart.html" style="text-decoration: none;"><button class="btn count_btn"><i class="fas fa-lock"></i> <span id="count">0</span> Cart</button></a>
                     <button class="dark-mode" onclick="toggleTheme()"><i class="fal fa-moon"></i></button>
                 </div>
             </nav>
@@ -60,8 +60,13 @@
      
     <!-- ======================================================== SLIDER ======================================================== -->
     <section id="slider">
-        <button id="left_btn"> <i class="fas fa-chevron-left"></i> </button>
-        <button id="right_btn"> <i class="fas fa-chevron-right"></i> </button>
+        <div id="slider_image"></div>
+        <div id="slider_content">
+            <div class="slider_text">Up To 60% Off Now</div>
+            <div class="slider_text">Mid Season Sale 40%</div>
+            <div class="slider_text">Final Clearance : Take 20% Off 'Sale Must-haves'</div>
+            <div class="slider_text"><button> <a href="#product_heading_section">Start Shopping &nbsp; <i class="fa fa-arrow-right"></i> </a> </button></div>
+        </div>
     </section>
     <!-- ======================================================== /SLIDER ======================================================== -->
 
@@ -81,13 +86,13 @@
             <div class="card_content_wrapper card_con1">
                 Platform Velvet <br>
                 Sandals <br>
-                <button> <a href="#">Shop Now &nbsp; <i class="fa fa-arrow-right"></i> </a> </button> 
+                <button> <a href="#product_heading_section">Shop Now &nbsp; <i class="fa fa-arrow-right"></i> </a> </button> 
             </div>
             <div class="card" id="card2"></div>
             <div class="card_content_wrapper card_con2">
                 Pebbled Weekend <br>
                 Bag <br>
-                <button> <a href="#">Shop Now &nbsp; <i class="fa fa-arrow-right"></i> </a> </button> 
+                <button> <a href="#product_heading_section">Shop Now &nbsp; <i class="fa fa-arrow-right"></i> </a> </button> 
             </div>
         </div>
     </section>
@@ -104,34 +109,12 @@
     <!-- ******************************************************** /PRODUCT HEADER ******************************************************** -->
     <!-- ******************************************************** PRODUCT COLLECTION ******************************************************** -->
     <section id="product_section">
-        <div id="product_collection">
-            <div class="product_item">
-                <a href="#">
-                    <div class="product_image_div">
-                        <img src="Images/d1.jpg" alt="" class="product_image">
-                        <div class="product_image_btns">
-                            <div class="view_product_div"> <a class="fa fa-eye eye_btn" href="cart.html"></a> </div>
-                            <div class="add_to_cart_div"> <a class="add_to_cart" href="cart.html">Add to Cart</a> </div>
-                        </div>
-                    </div>
-                </a>
-                <div class="product_name_div"> <a class="product_name" href="cart.html">Checkered Casual Shirt</a> </div>
-                <div class="product_price">
-                    <span> <del>$975.00</del> </span> &nbsp;<span>$899.99</span>
-                </div>
-            </div>
-        </div>
+        <div id="product_collection"></div>
         <!-- ******************************************************** /PRODUCT COLLECTION ******************************************************** -->
         <!-- ******************************************************** ADD THE PRODUCT ******************************************************** -->
-        <div id="new_product_panel_div"><button id="new_product_panel" onclick="addProduct()">CLICK HERE TO ADD NEW PRODUCT</button></div>
-        <!-- <div id="product_details">
-
+        <div id="new_product_panel_div">
+            <button id="new_product_panel" onclick="openCart() ">CLICK HERE TO ADD NEW PRODUCT</button>
         </div>
-        <div id="btn_container">
-            <div id="vertical-center">
-                <button onclick="addProduct()">Add Product</button>
-            </div>
-        </div> -->
     </section>
     <!-- ******************************************************** /ADD THE PRODUCT ******************************************************** -->
     <!-- ======================================================== /PRODUCT SECTION ======================================================== -->

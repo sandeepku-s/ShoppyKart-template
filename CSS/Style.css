@@ -240,40 +240,73 @@ header {
 /* ======================================================== SLIDER ======================================================== */
 #slider {
     height: 500px;
-    padding: 20px;
-    background-image: url(../Images/banner1.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-#slider button {
-    width: 50px;
-    height: 50px;
-    border-radius: var(--border-radius);
-    color: var(--bg-color);
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.5px);
-    -webkit-backdrop-filter: blur(8.5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 0px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#slider #left_btn {
+#slider #slider_image {
     position: absolute;
-    top: 300px;
-    left: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-image: url(../Images/banner1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(50%) brightness(50%);
+    z-index: -1;
 }
 
-#slider #right_btn {
-    position: absolute;
-    top: 300px;
-    right: 20px;
+#slider #slider_content {
+    width: 100%;
+    max-width: 1150px;
+    text-align: center;
+    position: relative;
+    padding: 50px;
 }
 
-#slider button:hover {
-    background-color: var(--bg-color);
+#slider #slider_content .slider_text {
+    font-weight: bold;
+    color: var(--bg-color);
+    font-family: MyCondensed-Bold;
+}
+
+#slider #slider_content .slider_text:nth-child(1) {
+    font-size: 25px;
     color: var(--secondary-color);
+}
+
+#slider #slider_content .slider_text:nth-child(2) {
+    font-size: 70px;
+}
+
+#slider #slider_content .slider_text:nth-child(3) {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+#slider #slider_content button {
+    width: 250px;
+    background-color: var(--primary-color);
+    border: none;
+    font-family: MyLight;
+    font-size: 15px;
+    border-radius: var(--border-radius);
+    padding: 15px 40px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#slider #slider_content button a {
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+#slider #slider_content button:hover {
+    background-color: var(--third-color);
 }
 /* ======================================================== /SLIDER ======================================================== */
 
@@ -537,7 +570,7 @@ header {
 }
 
 .product_item .product_name_div .product_name:hover {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 /* /Product name */
 /* Product price */
@@ -569,8 +602,6 @@ header {
     font-family: MyLight;
     font-size: 15px;
     border: 0px;
-    /* background-color: var(--heading-color); */
-    /* transition: all 0.3s; */
 }
 
 #new_product_panel:hover {
@@ -581,38 +612,6 @@ header {
     text-decoration: underline;
 }
 /* ******************************************************** /PRODUCT COLLECTION ******************************************************** */
-/* ******************************************************** ADD THE PRODUCT ******************************************************** */
-#product_details {
-    margin: 0 auto;
-    width: 350px;
-    background-color: #0e0e0e;
-}
-
-#product_section #btn_container {
-    position: relative;
-    width: 1150px;
-    margin: 0 auto;
-}
-
-#product_section #vertical-center {
-    position: absolute;
-    top: 50%;
-    left: 475px;
-}
-
-#btn_container button {
-    width: 200px;
-    height: 40px;
-    border: 0px;
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    border-radius: var(--border-radius);
-}
-
-#btn_container button:hover {
-    background-color: var(--secondary-color);
-}
-/* ******************************************************** /ADD THE PRODUCT ******************************************************** */
 /* ======================================================== /PRODUCT SECTION ======================================================== */
 
 /* ======================================================== SUBSCRIPTION ======================================================== */
@@ -881,3 +880,125 @@ header {
     border-radius: var(--border-radius);
 }
 /* ======================================================== /MOVETOP ======================================================== */
+
+
+
+
+
+/* ######################################################## CART.HTML ######################################################## */
+#cart_body {
+    width: 1000px;
+    height: 500px;
+    background-color: var(--bg-lightgrey);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+/* ======================================================== PRODUCT SECTION ======================================================== */
+/* ******************************************************** ADD THE PRODUCT ******************************************************** */
+#product_details {
+    width: 900px;
+    height: 450px;
+}
+
+#product_details #product_details_wrapper {
+    width: 900px;
+    height: 450px;
+    padding: 50px;
+}
+
+#product_details #product_details_wrapper #product_details_form #product_picture {
+    display: none;
+}
+
+#product_details #product_details_wrapper #product_details_form #product_picture_div {
+    width: 300px;
+    height: 350px;
+    border: 2px dotted var(--primary-dark);
+    border-radius: var(--border-radius);
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    float: left;
+    cursor: pointer;
+}
+
+#product_details #product_details_wrapper #product_details_form #product_picture_div table {
+    width: 100px;
+    height: 150px;
+}
+
+#product_details #product_details_wrapper #product_details_form #product_picture_div tr,th {
+    border: 1.5px dotted var(--primary-color);
+}
+
+#product_details #product_details_wrapper #product_details_form #product_picture_div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the div */
+    border-radius: var(--border-radius);
+}
+
+#product_details #product_details_wrapper #product_details_form #product_details_div {
+    float: right;
+    width: 480px;
+    height: 350px;
+    padding: 30px;
+    border-radius: var(--border-radius);
+}
+
+#product_details #product_details_wrapper #product_details_form #product_details_div label {
+    color: var(--primary-dark);
+    font-family: MyCondensed-Italic;
+    font-size: 22px;
+    padding: 4px 0px;
+    cursor: pointer;
+}
+
+#product_details #product_details_wrapper #product_details_form #product_details_div #_product_name {
+    height: 30px;
+    width: 300px;
+    outline: 0px;
+    padding: 5px;
+    margin: 1px 0px;
+    font-size: 22px;
+    color: var(--primary-dark);
+    font-family: MyCondensed-Italic;
+}
+
+
+
+#product_section #btn_container {
+    position: relative;
+    width: 1150px;
+    margin: 0 auto;
+}
+
+#product_section #vertical-center {
+    position: absolute;
+    top: 50%;
+    left: 475px;
+}
+
+#btn_container button {
+    width: 200px;
+    height: 40px;
+    border: 0px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: var(--border-radius);
+}
+
+#btn_container button:hover {
+    background-color: var(--secondary-color);
+}
+/* ******************************************************** /ADD THE PRODUCT ******************************************************** */
+/* ======================================================== /PRODUCT SECTION ======================================================== */
+/* ######################################################## /CART.HTML ######################################################## */
+
+
