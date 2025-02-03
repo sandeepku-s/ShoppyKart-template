@@ -49,48 +49,91 @@ function topFunction()
     });
 }
 // ======================================================== /MOVETOP ========================================================
-// ########################################################  /INDEX.HTML ########################################################
 
 
-// ######################################################## CART.HTML ########################################################
+
+
+
+
+// ======================================================== CUSTOM DIV ========================================================
+// ======================================================== PRODUCT SECTION ========================================================
+
 // ******************************************************** PAGE SETTING ********************************************************
+function playVideo()
+{
+    document.getElementById("overlay").style.display="block";
+    document.getElementById("video_window").style.display="block"
+    document.getElementById("product_details_wrapper").style.display="none";
+    document.getElementById("your_cart").style.display="none";
+    document.getElementById("map_window").style.display="none";
+}
+
+function openMap()
+{
+    document.getElementById("overlay").style.display="block";
+    document.getElementById("video_window").style.display="none"
+    document.getElementById("product_details_wrapper").style.display="none";
+    document.getElementById("your_cart").style.display="none";
+    document.getElementById("map_window").style.display="block";
+}
+
 function openCart()
 {
-    let width = 1000;
-    let height = 500;
+    document.getElementById("overlay").style.display="block";
+    document.getElementById("video_window").style.display="none"
+    document.getElementById("product_details_wrapper").style.display="none";
+    document.getElementById("your_cart").style.display="block";
+    document.getElementById("map_window").style.display="none";
+}
 
-    let left = (screen.width - width) / 2;
-    let top = (screen.height - height) / 2;
+function openProduct()
+{
+    document.getElementById("overlay").style.display="block";
+    document.getElementById("video_window").style.display="none"
+    document.getElementById("product_details_wrapper").style.display="block"
+    document.getElementById("your_cart").style.display="none";
+    document.getElementById("map_window").style.display="none";
+}
 
-    window.open("cart.html", "_blank", "width=" + width + ", height=" + height + ", top=" + top + ", left=" + left);
+function cls()
+{
+	document.getElementById("overlay").style.display="none";
 }
 // ******************************************************** /PAGE SETTING ********************************************************
 
-// ======================================================== PRODUCT SECTION ========================================================
+
+// ******************************************************** YOUR CART ********************************************************
+
+// ******************************************************** /YOUR CART ********************************************************
+
+
 // ******************************************************** ADD THE PRODUCT ********************************************************
+
+var productImgPath = '';
+
 document.addEventListener("DOMContentLoaded", function()
 {
     let fileInput = document.getElementById("product_picture");
     let pictureDiv = document.getElementById("product_picture_div");
+    let pathDisplayDiv = document.createElement('div');
+    pathDisplayDiv.style = `display: none;`; 
+    pathDisplayDiv.setAttribute("id","product_img_path")
 
-    pictureDiv.addEventListener("click", function()
-    {
+    pictureDiv.addEventListener("click", function() {
         fileInput.click();
     });
 
-    fileInput.addEventListener("change", function(event)
-    {
+    fileInput.addEventListener("change", function(event) {
         let file = event.target.files[0];
 
         if (file)
         {
-            let reader = new FileReader();
-            
-            reader.onload = function(e)
-            {
-                pictureDiv.innerHTML = `<img src="${e.target.result}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">`;
-            };
-            reader.readAsDataURL(file); 
+            productImgPath = URL.createObjectURL(file);
+
+            pictureDiv.innerHTML = `<img id="product_img" src="${productImgPath}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">`;
+
+            pathDisplayDiv.innerHTML = `<p>${productImgPath}</p>`;
+            pictureDiv.parentElement.appendChild(pathDisplayDiv);
         }
     });
 });
@@ -104,21 +147,63 @@ function addProduct()
     chlEl_div.innerHTML=`
     <a href="#">
         <div class="product_image_div">
-            <img src="====================" alt="" class="product_image">
+            <img src="${productImgPath}" alt="" class="product_image">
             <div class="product_image_btns">
                 <div class="view_product_div"> <a class="fa fa-eye eye_btn" href="cart.html"></a> </div>
                 <div class="add_to_cart_div"> <a class="add_to_cart" href="cart.html">Add to Cart</a> </div>
             </div>
         </div>
     </a>
-    <div class="product_name_div"> <a class="product_name" href="cart.html">====================</a> </div>
+    <div class="product_name_div"> <a class="product_name" href="cart.html">${ProductName}</a> </div>
     <div class="product_price">
         <span> <del>====================</del> </span> &nbsp;<span>====================</span>
     </div>
     `;
 
-    prnt_div.insertBefore(chlEl_div,prnt_div.children[0]);
+    prnt_div.appendChild(chlEl_div);
 }
+
+// RATING
+document.addEventListener("DOMContentLoaded", function() {
+    let stars = document.querySelectorAll(".star");
+
+    stars.forEach(star => {
+        star.addEventListener("mousedown", function(event) {
+            let value = parseInt(this.getAttribute("data-value"));
+
+            if (event.button === 0) { // Left Click = Full Star
+                updateStars(value, "full");
+            } else if (event.button === 2) { // Right Click = Half Star
+                updateStars(value, "half");
+            }
+        });
+
+        star.addEventListener("contextmenu", function(event) {
+            event.preventDefault(); // Prevents right-click menu
+        });
+    });
+
+    function updateStars(value, type) {
+        stars.forEach(star => {
+            let starValue = parseInt(star.getAttribute("data-value"));
+
+            if (starValue < value) {
+                star.classList.remove("half");
+                star.classList.add("full"); // Full stars for all previous ones
+            } else if (starValue === value) {
+                star.classList.remove("full", "half");
+                star.classList.add(type); // Half star only for the clicked one
+            } else {
+                star.classList.remove("full", "half"); // Reset the rest
+            }
+        });
+    }
+});
+
+// /RATING
+
+
 // ******************************************************** /ADD THE PRODUCT ********************************************************
-// ======================================================== PRODUCT SECTION ========================================================
-// ########################################################  /CART.HTML ########################################################
+// ======================================================== /PRODUCT SECTION ========================================================
+// ======================================================== /CUSTOM DIV ========================================================
+// ########################################################  /INDEX.HTML ########################################################
