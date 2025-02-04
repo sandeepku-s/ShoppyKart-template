@@ -191,8 +191,8 @@ function displayProducts()
             <a class="product_name" href="#" onclick="openCart()">${product[2]}</a>
         </div>
         <div class="product_price">
-            <span><del>₹ ${product[4]}</del></span> &nbsp;
-            <span>₹ ${product[5]}</span>
+            <span><del>₹ ${product[4]} /-</del></span> &nbsp;
+            <span>₹ ${product[5]} /-</span>
         </div>
         `;
 
@@ -230,79 +230,54 @@ window.onload = displayProducts;
 // ******************************************************** /YOUR CART ********************************************************
 
 
-// ******************************************************** ADD THE PRODUCT ********************************************************
-
-
-
-// var product_ID = 
-
-
-// function addProduct()
-// {
-//     let prnt_div = document.getElementById("product_collection");
-//     let chlEl_div = document.createElement("div");
-//     chlEl_div.setAttribute("class","product_item");
-
-//     chlEl_div.innerHTML=`
-//     <a href="#">
-//         <div class="product_image_div">
-//             <img src="${productImgPath}" alt="" class="product_image">
-//             <div class="product_image_btns">
-//                 <div class="view_product_div"> <a class="fa fa-eye eye_btn" href="cart.html"></a> </div>
-//                 <div class="add_to_cart_div"> <a class="add_to_cart" href="cart.html">Add to Cart</a> </div>
-//             </div>
-//         </div>
-//     </a>
-//     <div class="product_name_div"> <a class="product_name" href="cart.html">${ProductName}</a> </div>
-//     <div class="product_price">
-//         <span> <del>====================</del> </span> &nbsp;<span>====================</span>
-//     </div>
-//     `;
-
-//     prnt_div.appendChild(chlEl_div);
-// }
-
 // RATING
 document.addEventListener("DOMContentLoaded", function() {
     let stars = document.querySelectorAll(".star");
 
     stars.forEach(star => {
-        star.addEventListener("mousedown", function(event) {
+        star.addEventListener("mousedown", function(event)
+        {
             let value = parseInt(this.getAttribute("data-value"));
 
-            if (event.button === 0) { // Left Click = Full Star
+            if (event.button === 0)
+            {
                 updateStars(value, "full");
-            } else if (event.button === 2) { // Right Click = Half Star
+            }
+            else if (event.button === 2)
+            {
                 updateStars(value, "half");
             }
         });
 
         star.addEventListener("contextmenu", function(event) {
-            event.preventDefault(); // Prevents right-click menu
+            event.preventDefault();
         });
     });
 
-    function updateStars(value, type) {
+    function updateStars(value, type)
+    {
         stars.forEach(star => {
             let starValue = parseInt(star.getAttribute("data-value"));
 
-            if (starValue < value) {
+            if (starValue < value)
+            {
                 star.classList.remove("half");
-                star.classList.add("full"); // Full stars for all previous ones
-            } else if (starValue === value) {
+                star.classList.add("full");
+            }
+            else if (starValue === value)
+            {
                 star.classList.remove("full", "half");
-                star.classList.add(type); // Half star only for the clicked one
-            } else {
-                star.classList.remove("full", "half"); // Reset the rest
+                star.classList.add(type);
+            }
+            else
+            {
+                star.classList.remove("full", "half");
             }
         });
     }
 });
-
 // /RATING
 
-
-// ******************************************************** /ADD THE PRODUCT ********************************************************
 // ======================================================== /PRODUCT SECTION ========================================================
 // ======================================================== /CUSTOM DIV ========================================================
 
