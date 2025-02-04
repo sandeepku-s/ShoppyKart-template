@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-    <script src="Script.js"></script>
+    <script src="Script.js" defer></script>
 
     <!-- ======================================================== HEADER ======================================================== -->
     <header>
@@ -123,7 +123,7 @@
         <!-- ******************************************************** /PRODUCT COLLECTION ******************************************************** -->
         <!-- ******************************************************** ADD THE PRODUCT ******************************************************** -->
         <div id="new_product_panel_div">
-            <button id="new_product_panel" onclick="openProduct()" title="ADD THE NEW PRODUCT">CLICK HERE TO ADD NEW PRODUCT</button>
+            <button id="new_product_panel" onclick="addMoreProduct()" title="ADD THE NEW PRODUCT">CLICK HERE TO ADD NEW PRODUCT</button>
         </div>
     </section>
     <!-- ******************************************************** /ADD THE PRODUCT ******************************************************** -->
@@ -183,7 +183,7 @@
                     <p id="addr" onclick="openMap()" title="CURRENT ADDRESS">
                         Karnataka, Bengaluru<br>
                         chamdramouleshwara layout, Hunasamaranahalli<br>
-                        562157<br>
+                        562157 <br>
                     </p>
                     <p>
                         <a href="tel:+21 255 999 8888">+21 255 999 8888</a><br>
@@ -252,6 +252,40 @@
             </div>
             <!-- ******************************************************** /MAP ******************************************************** -->
 
+            <!-- ******************************************************** ADD THE PRODUCT ******************************************************** -->
+            <div id="product_info_div">
+                <div>
+                    <form action="get">
+                        <table cellpadding="0px" cellspacing="4px">
+                            <tr>
+                                <td><label for="prdc_name_path">Product image path : </label></td>
+                                <td><input id="prdc_name_path" class="_prdc_name" value="" type="text" required title="PRODUCT IMAGE PATH" autocomplete="off"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="prdc_name">Product Name : </label></td>
+                                <td><input id="prdc_name" class="_prdc_name" value="" type="text" required title="PRODUCT NAME" autocomplete="off"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="prdc_rating">Product rating : </label></td>
+                                <td><input id="prdc_rating" class="_prdc_name" value="" type="number" required title="PRODUCT RATING"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="prdc_org_price">Product price : </label></td>
+                                <td><input id="prdc_org_price" class="_prdc_name" value="" type="number" required title="PRODUCT PRICE"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="prdc_dis_price">Discount price : </label></td>
+                                <td><input id="prdc_dis_price" class="_prdc_name" value="" type="number" required title="PRODUCT DISCOUNT PRICE"></td>
+                            </tr>
+                            <tr>
+                                <th><button title="ADD PRODUCT" onclick="addProduct()">Add Product</button></th>
+                                <th><input type="reset" id="clear" title="CLEAR"></th>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <!-- ******************************************************** /ADD THE PRODUCT ******************************************************** -->
 
             <!-- ******************************************************** YOUR CART ******************************************************** -->
             <div id="your_cart">

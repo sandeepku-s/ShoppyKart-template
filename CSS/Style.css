@@ -954,26 +954,81 @@ header {
 /* ======================================================== CUSTOM DIV ======================================================== */
 /* ======================================================== PRODUCT SECTION ======================================================== */
 
-/* ******************************************************** VIDEO ******************************************************** */
-#product_details #video_window {
+/* ******************************************************** VIDEO AND MAP ******************************************************** */
+#product_details #video_window,#map_window,#product_info_div {
     width: 900px;
     height: 400px;
     padding: 0px 50px;
     display: none;
     overflow: hidden;
+    border-radius: var(--border-radius);
 }
-/* ******************************************************** /VIDEO ******************************************************** */
+/* ******************************************************** /VIDEO AND MAP ******************************************************** */
 
-/* ******************************************************** MAP ******************************************************** */
-#product_details #map_window {
-    width: 900px;
+/* ******************************************************** ADD THE PRODUCT ******************************************************** */
+#product_details #product_info_div {
+    width: 700px;
     height: 400px;
-    padding: 0px 50px;
-    display: none;
-    overflow: hidden;
+    margin: 0 auto;
+    background-color: var(--bg-grey);
 }
-/* ******************************************************** /MAP ******************************************************** */
 
+#product_details #product_info_div div {
+    width: 500px;
+    height: 360px;
+    margin: 20px auto;
+}
+
+#product_details #product_info_div div table {
+    width: 500px;
+    height: 360px;
+}
+
+#product_details #product_info_div div table tr {
+    margin: 20px;
+}
+
+#product_details #product_info_div div table tr th {
+    border: 0px;
+}
+
+#product_details ._prdc_name {
+    height: 30px;
+    width: 300px;
+    outline: 0px;
+    padding: 5px;
+    margin: 1px 0px;
+    font-size: 22px;
+    color: var(--primary-dark);
+    font-family: MyCondensed-Italic;
+}
+
+#product_details  label {
+    width: 200px;
+    color: var(--primary-dark);
+    font-family: MyCondensed-Italic;
+    font-size: 22px;
+    padding: 4px 0px;
+    cursor: pointer;
+}
+
+#product_details #product_info_div button,#clear {
+    width: 200px;
+    margin: 0 auto;
+    height: 50px;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-family: MyCondensed-Italic;
+    font-size: 18px;
+    border: 0px;
+    border-radius: var(--border-radius);
+}
+
+#product_details #product_info_div button:hover {
+    background-color: var(--third-color);
+}
+/* ******************************************************** /ADD THE PRODUCT ******************************************************** */
 
 /* ******************************************************** YOUR CART ******************************************************** */
 
