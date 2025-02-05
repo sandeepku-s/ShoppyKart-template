@@ -6,9 +6,9 @@
     <title>ShoppyKart</title>
     <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
     
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="actions">
                     <button class="btn" title="LOGIN"><i class="fas fa-user"></i> Login</button>
-                    <a href="#" style="text-decoration: none;"><button class="btn count_btn" onclick="openCart()" title="CART"><i class="fas fa-lock"></i> <span id="count">0</span> Cart</button></a>
+                    <button class="btn count_btn" onclick="openCart()" title="CART"><i class="fas fa-lock"></i> <span id="count">0</span> Cart</button>
                     <button class="dark-mode" onclick="toggleTheme()" title="THEME SWITCH"><i class="fal fa-moon"></i></button>
                 </div>
             </nav>
@@ -58,17 +58,17 @@
     </header>
     <!-- ======================================================== /HEADER ======================================================== -->
      
-    <!-- ======================================================== SLIDER ======================================================== -->
-    <section id="slider">
-        <div id="slider_image"></div>
-        <div id="slider_content">
-            <div class="slider_text">Up To 60% Off Now</div>
-            <div class="slider_text">Mid Season Sale 40%</div>
-            <div class="slider_text">Final Clearance : Take 20% Off 'Sale Must-haves'</div>
-            <div class="slider_text"> <a href="#product_heading_section" title="BUY NOW"><button>Start Shopping &nbsp; <i class="fa fa-arrow-right"></i> </button></a> </div>
+    <!-- ======================================================== BANNER ======================================================== -->
+    <section id="banner">
+        <div id="banner_image"></div>
+        <div id="banner_content">
+            <div class="banner_text">Up To 60% Off Now</div>
+            <div class="banner_text">Mid Season Sale 40%</div>
+            <div class="banner_text">Final Clearance : Take 20% Off 'Sale Must-haves'</div>
+            <div class="banner_text"> <a href="#product_heading_section"><button title="BUY NOW">Start Shopping &nbsp; <i class="fa fa-arrow-right"></i> </button></a> </div>
         </div>
     </section>
-    <!-- ======================================================== /SLIDER ======================================================== -->
+    <!-- ======================================================== /BANNER ======================================================== -->
 
     <!-- ======================================================== FREE-SHIPPING ======================================================== -->
     <section id="free_shoping_section">
@@ -255,107 +255,70 @@
             <!-- ******************************************************** ADD THE PRODUCT ******************************************************** -->
             <div id="product_info_div">
                 <div>
-                    <form action="get">
-                        <table cellpadding="0px" cellspacing="4px">
-                            <tr>
-                                <td><label for="prdc_name_path">Product image path : </label></td>
-                                <td><input id="prdc_name_path" class="_prdc_name" value="" type="text" required title="PRODUCT IMAGE PATH" autocomplete="off"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="prdc_name">Product Name : </label></td>
-                                <td><input id="prdc_name" class="_prdc_name" value="" type="text" required title="PRODUCT NAME" autocomplete="off"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="prdc_rating">Product rating : </label></td>
-                                <td><input id="prdc_rating" class="_prdc_name" value="" type="number" required title="PRODUCT RATING"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="prdc_org_price">Product price : </label></td>
-                                <td><input id="prdc_org_price" class="_prdc_name" value="" type="number" required title="PRODUCT PRICE"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="prdc_dis_price">Discount price : </label></td>
-                                <td><input id="prdc_dis_price" class="_prdc_name" value="" type="number" required title="PRODUCT DISCOUNT PRICE"></td>
-                            </tr>
-                            <tr>
-                                <th><button title="ADD PRODUCT" onclick="addProduct()">Add Product</button></th>
-                                <th><input type="reset" id="clear" title="CLEAR"></th>
-                            </tr>
-                        </table>
-                    </form>
+                    <table cellpadding="0px" cellspacing="4px">
+                        <tr>
+                            <th colspan="2" id="product_info_header">ADD PRODUCT INFORMATION</th>
+                        </tr>
+                        <tr>
+                            <td><label for="prdc_name_path">Product image path : </label></td>
+                            <td><input id="prdc_name_path" class="_prdc_name" value="" type="text" required title="PRODUCT IMAGE PATH" autocomplete="off" placeholder="eg. Images/product_name.png"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="prdc_name">Product Name : </label></td>
+                            <td><input id="prdc_name" class="_prdc_name" value="" type="text" required title="PRODUCT NAME" autocomplete="off"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="prdc_rating">Product rating : </label></td>
+                            <td><input id="prdc_rating" class="_prdc_name" value="" type="number" required title="PRODUCT RATING"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="prdc_org_price">Product price : </label></td>
+                            <td><input id="prdc_org_price" class="_prdc_name" value="" type="number" required title="PRODUCT PRICE"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="prdc_dis_price">Discount price : </label></td>
+                            <td><input id="prdc_dis_price" class="_prdc_name" value="" type="number" required title="PRODUCT DISCOUNT PRICE"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><button class="buttons" title="ADD PRODUCT" onclick="addProduct()">Add Product</button></th>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <!-- ******************************************************** /ADD THE PRODUCT ******************************************************** -->
+
+            <!-- ******************************************************** PRODUCT DETAILS ******************************************************** -->
+            <div id="product_details_wrapper">
+                <div class="product_header">PRODUCT INFORMATION</div>
+                <div id="product_picture_div" title="PRODUCT PICTURE">
+                    <img src="" alt="" onmousemove="magnifier(event, this.src)" onmouseenter="showBox()" onmouseleave="hideBox()">
+                </div>
+                <div id="product_details_div">
+                    <div id="product_name_detls" title="PRODUCT NAME"></div>
+                    <div id="product_rating_detls" title="PRODUCT RATING"></div>
+                    <div id="product_discription_detls" title="PRODUCT DISCRIPTION">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, maiores ut ex quod perferendis dolor consectetur quasi? Blanditiis, odit cupiditate itaque eaque totam maxime laborum doloribus sunt corrupti. Eaque, nisi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda illo odit debitis fuga consequatur? At mollitia sequi molestias magni aliquam error tempore perspiciatis, molestiae, tempora, repellendus inventore impedit voluptates perferendis.</div>
+                    <div>
+                        <span id="product_price_detls" title="PRODUCT PRICE"></span>
+                        <span id="product_discounted_price_detls" title="DISCOUNT PRICE"></span>
+                    </div>
+                </div>
+                <div id="mouse_hover_box"></div>
+            </div>
+            <!-- ******************************************************** /PRODUCT DETAILS ******************************************************** -->
 
             <!-- ******************************************************** YOUR CART ******************************************************** -->
             <div id="your_cart">
-                <div id="your_cart_header">YOUR CART</div>
-                <div id="your_cart_section">
-                    <div>
-
-                    </div>
+                <div class="product_header">YOUR CART</div>
+                <div id="your_cart_section"></div>
+                <div id="checkout">
+                    <br><span id="checkout_btn"><button class="buttons" onclick="checkout()">CHECKOUT</button></span><br><br>
+                    <span id="total_amount">TOTAL AMOUNT : ₹ 0.00 /-</span>
                 </div>
+                <div id="product_cart_image"><img src="" alt=""></div>
             </div>
             <!-- ******************************************************** /YOUR CART ******************************************************** -->
-
-            <!-- ******************************************************** ADD THE PRODUCT ******************************************************** -->
-            <div id="product_details_wrapper">
-                <div id="product_details_header">PRODUCT INFORMATION</div>
-                <form id="product_details_form" action="new.php" method="post" autocomplete="off" enctype="multipart/form-data">
-                    <input type="file" value="" id="product_picture" accept="image/*" required>
-                    <div id="product_picture_div" for="product_picture" title="UPLOAD PRODUCT PIC">
-                        <table  rules="all">
-                            <tr><th></th><th></th></tr>
-                            <tr><th></th><th></th></tr>
-                        </table>
-                    </div>
-                    <div id="product_details_div">
-                        <table cellpadding="0px" cellspacing="4px">
-                            <tr>
-                                <td><label for="_product_name">Product Name : </label></td>
-                                <td><input id="_product_name" class="_product_text_box" value="" type="text" autofocus required title="PRODUCT NAME"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="product_rating">Rating : </label></td>
-                                <td>
-                                    <div id="product_rating" title="PRODUCT RATING">
-                                        <span class="star" data-value="1">&#9734;</span>
-                                        <span class="star" data-value="2">&#9734;</span>
-                                        <span class="star" data-value="3">&#9734;</span>
-                                        <span class="star" data-value="4">&#9734;</span>
-                                        <span class="star" data-value="5">&#9734;</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="product_discription">Description : </label></td>
-                                <td>
-                                    <textarea name="Product-Discription" id="product_discription" title="PRODUCT DISCRIPTION">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus temporibus velit repudiandae neque commodi sunt quibusdam eum eius, alias porro facere cumque placeat debitis, assumenda vel id doloremque minima labore.</textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="product_org_price">Original Price : </label></td>
-                                <td><input id="product_org_price" class="_product_text_box" value="" type="number" required title="PRODUCT PRICE"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="product_dis_price">Discounted Price : </label></td>
-                                <td><input id="product_dis_price" class="_product_text_box" value="" type="number" required title="DISCOUNT PRICE"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <div id="btn_container">
-                                        <button title="ADD PRODUCT">Add Product</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </form>
-            </div>
-            <!-- ******************************************************** /ADD THE PRODUCT ******************************************************** -->
 		</div>
 	</div>
-    
     <!-- ======================================================== /CUSTOM DIV ======================================================== -->
 </body>
 </html>
