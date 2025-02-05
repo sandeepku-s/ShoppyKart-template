@@ -1223,7 +1223,7 @@ header {
     border-radius: var(--border-radius);
 }
 
-#your_cart #total_amount {
+#your_cart #your_cart_section,#total_amount {
     text-align: center;
     font-family: MyCondensed-Italic;
     font-size: 26px;
@@ -1277,6 +1277,7 @@ header {
 #checkout {
     margin: 0 auto;
     width: 300px;
+    padding: 0px 20px;
 }
 /* ******************************************************** /YOUR CART ******************************************************** */
 /* ======================================================== /PRODUCT SECTION ======================================================== */
