@@ -4,14 +4,20 @@ Welcome to the **E-Commerce Web Application** – a seamless and dynamic platfor
 
 ---
 
-## 📸 Preview
-![Page preview](Images/page_perview.png)
-![](Images/page_perview(1).png)
-![Cart page window](Images/cart.png)
-![Checkout window](Images/checkout.png)
-![Product information window](Images/product_information.png)
-![Video window](Images/display_video.png)
-![Map window](Images/map.png)
+## 📸 Preview  
+### 🛍️ **Page Preview**  
+![Page preview](Images/page_preview.jpg)  
+### 🛒 **Cart Page Window**  
+![Cart page window](Images/cart.png)  
+### 💳 **Checkout Window Notification**  
+![Checkout window](Images/checkout.png)  
+### 🏷️ **Product Information Window**  
+![Product information window](Images/product_information.png)  
+### 🎥 **Video Window**  
+![Video window](Images/display_video.png)  
+### 🗺️ **Map Window**  
+![Map window](Images/map.png)  
+### ➕ **Add the Product Window**  
 ![Add the Product window](Images/add_product.png)
 
 ---
