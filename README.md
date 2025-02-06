@@ -5,20 +5,14 @@ Welcome to the **E-Commerce Web Application** – a seamless and dynamic platfor
 ---
 
 ## 📸 Preview
-<img src="Images/page_perview.png" usemap="#page1" alt="Page preview">
-<img src="Images/page_perview.png" usemap="#page1(1)" alt="Page preview">
-<img src="Images/cart.png" alt="Cart page preview" name="#cart">
-<img src="Images/checkout.png" alt="Checkout window">
-<img src="Images/product_information.png" alt="Product information window">
-<img src="Images/display_video.png" alt="Video window">
-<img src="Images/map.png" alt="Map window">
-<img src="Images/add_product.png" alt="Add the Product window">
-
-<map name="page1">
-		<area shape="rect" coords="388,7,422,22" href="cart"/>
-		<area shape="circle" coords="61,65,25" href="https://www.google.com/"/>
-		<area shape="poly" coords="185,10,269,23,366,7,271,86,217,57,174,86" href="https://www.vthreesoft.com/"/>
-</map>
+![Page preview](Images/page_perview.png)
+![](Images/page_perview(1).png)
+![Cart page window](Images/cart.png)
+![Checkout window](Images/checkout.png)
+![Product information window](Images/product_information.png)
+![Video window](Images/display_video.png)
+![Map window](Images/map.png)
+![Add the Product window](Images/add_product.png)
 
 ---
 
@@ -88,19 +82,18 @@ Welcome to the **E-Commerce Web Application** – a seamless and dynamic platfor
 Here is an overview of the project structure:
 
 ```bash
-E-Commerce-Project/
+ShoppyKart-template/
 ├── index.html               # The main HTML file with the product listing and cart structure
 ├── CSS/
 │   ├── Style.css            # The main stylesheet for page layouts and UI
 │   └── Font.css             # Additional styles related to custom fonts
 ├── Fonts/
-│   └── font_templates/      # Custom fonts and templates used in the app
+│   └── font_templates       # Custom fonts and templates used in the app
 ├── Images/
-│   ├── images/              # Folder containing all product images
-│   │   ├── product_1.jpg    # Example product image
-│   │   └── product_2.jpg    # Another example image
-├── Script.js                # JavaScript logic for managing products, cart, and UI behavior
-└── README.md                # This file
+│   ├── product_1.jpg        # Example product image
+│   ├── product_2.jpg        # Another example image
+│   └── .............	     # All Images
+└── Script.js                # JavaScript logic for managing products, cart, and UI behavior
 ```
 
 ---
