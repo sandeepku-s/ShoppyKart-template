@@ -1,6 +1,6 @@
 # E-Commerce Web Application
 
-Welcome to the **E-Commerce Web Application** – a seamless and dynamic platform where users can browse through products, add them to their cart, and enjoy a fully functional shopping experience, all built using modern web technologies: **HTML**, **CSS**, and **JavaScript**.
+Welcome to the **ShoppyKart Website** – a seamless and dynamic platform where users can browse through products, add them to their cart, and enjoy a fully functional shopping experience, all built using modern web technologies: **HTML**, **CSS**, and **JavaScript**.
 
 ---
 
@@ -53,7 +53,7 @@ Welcome to the **E-Commerce Web Application** – a seamless and dynamic platfor
    ```bash
    cd ShoppyKart-template
    ```
-3. Open `Index.html` in your web browser to use the ShoppyKart-template.
+3. Open `index.html` in your web browser to use the ShoppyKart-template.
 
 ---
 
