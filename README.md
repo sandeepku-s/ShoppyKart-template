@@ -107,6 +107,6 @@ This project can be deployed easily using platforms like [GitHub Pages](https://
 
 ### 🚀 **Live Demo** 
 You can preview the live demo of the application by following this link:
-[Demo Link](#) *(https://sandeepku-s.github.io/ShoppyKart-template/)*
+[Demo Link](https://sandeepku-s.github.io/ShoppyKart-template/)
 
 ---
