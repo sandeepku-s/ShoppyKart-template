@@ -5,14 +5,20 @@ Welcome to the **E-Commerce Web Application** – a seamless and dynamic platfor
 ---
 
 ## 📸 Preview
-![Page preview](Images/page_perview.png)
-![](Images/page_perview(1).png)
-![Cart page preview](Images/cart.png)
-![Checkout](Images/checkout.png)
-![Product information page](Images/product_information.png)
-![Display the Video](Images/display_video.png)
-![Display the Map](Images/map.png)
-![Add the Product](Images/add_product.png)
+<img src="Images/page_perview.png" usemap="#page1" alt="Page preview">
+<img src="Images/page_perview.png" usemap="#page1(1)" alt="Page preview">
+<img src="Images/cart.png" alt="Cart page preview" name="#cart">
+<img src="Images/checkout.png" alt="Checkout window">
+<img src="Images/product_information.png" alt="Product information window">
+<img src="Images/display_video.png" alt="Video window">
+<img src="Images/map.png" alt="Map window">
+<img src="Images/add_product.png" alt="Add the Product window">
+
+<map name="page1">
+		<area shape="rect" coords="388,7,422,22" href="cart"/>
+		<area shape="circle" coords="61,65,25" href="https://www.google.com/"/>
+		<area shape="poly" coords="185,10,269,23,366,7,271,86,217,57,174,86" href="https://www.vthreesoft.com/"/>
+</map>
 
 ---
 
