@@ -5,9 +5,14 @@ Welcome to the **E-Commerce Web Application** – a seamless and dynamic platfor
 ---
 
 ## 📸 Preview
+![Page preview](Images/page_perview.png)
+![](Images/page_perview(1).png)
 ![Cart page preview](Images/cart.png)
 ![Checkout](Images/checkout.png)
 ![Product information page](Images/product_information.png)
+![Display the Video](Images/display_video.png)
+![Display the Map](Images/map.png)
+![Add the Product](Images/add_product.png)
 
 ---
 
