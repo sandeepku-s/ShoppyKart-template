@@ -5,7 +5,7 @@ Welcome to the **ShoppyKart Website** – a seamless and dynamic platform where 
 ---
 
 ## 📸 Preview
-[![Page preview](Images/page_perview.png)](Images/My_WebSite_preview_video.mp4)
+[![Page preview](Images/page_perview.png)](https://drive.google.com/file/d/1EvHYpvCXXG8TnoQ2Fj8F63OzDhFME1nQ/view?usp=drive_link)
 ![Cart page preview](Images/cart.png)
 ![Checkout](Images/checkout.png)
 ![Product information page](Images/product_information.png)
