@@ -1,18 +1,24 @@
 # E-Commerce Web Application
 
-Welcome to the **E-Commerce Web Application** – a seamless and dynamic platform where users can browse through products, add them to their cart, and enjoy a fully functional shopping experience, all built using modern web technologies: **HTML**, **CSS**, and **JavaScript**.
+Welcome to the **ShoppyKart Website** – a seamless and dynamic platform where users can browse through products, add them to their cart, and enjoy a fully functional shopping experience, all built using modern web technologies: **HTML**, **CSS**, and **JavaScript**.
 
 ---
 
-## 📸 Preview
-![Page preview](Images/page_perview.png)
-![](Images/page_perview(1).png)
-![Cart page preview](Images/cart.png)
-![Checkout](Images/checkout.png)
-![Product information page](Images/product_information.png)
-![Display the Video](Images/display_video.png)
-![Display the Map](Images/map.png)
-![Add the Product](Images/add_product.png)
+## 📸 Preview  
+### 🛍️ **Page Preview**  
+[![Page preview](Images/page_preview.jpg)](Images/My_WebSite_preview_video.mp4)
+### 🛒 **Cart Page Window**  
+![Cart page window](Images/cart.png)  
+### 💳 **Checkout Window Notification**  
+![Checkout window](Images/checkout.png)  
+### 🏷️ **Product Information Window**  
+![Product information window](Images/product_information.png)  
+### 🎥 **Video Window**  
+![Video window](Images/display_video.png)  
+### 🗺️ **Map Window**  
+![Map window](Images/map.png)  
+### ➕ **Add the Product Window**  
+![Add the Product window](Images/add_product.png)
 
 ---
 
@@ -47,7 +53,7 @@ Welcome to the **E-Commerce Web Application** – a seamless and dynamic platfor
    ```bash
    cd ShoppyKart-template
    ```
-3. Open `Index.html` in your web browser to use the ShoppyKart-template.
+3. Open `index.html` in your web browser to use the ShoppyKart-template.
 
 ---
 
@@ -82,19 +88,18 @@ Welcome to the **E-Commerce Web Application** – a seamless and dynamic platfor
 Here is an overview of the project structure:
 
 ```bash
-E-Commerce-Project/
+ShoppyKart-template/
 ├── index.html               # The main HTML file with the product listing and cart structure
 ├── CSS/
 │   ├── Style.css            # The main stylesheet for page layouts and UI
 │   └── Font.css             # Additional styles related to custom fonts
 ├── Fonts/
-│   └── font_templates/      # Custom fonts and templates used in the app
+│   └── font_templates       # Custom fonts and templates used in the app
 ├── Images/
-│   ├── images/              # Folder containing all product images
-│   │   ├── product_1.jpg    # Example product image
-│   │   └── product_2.jpg    # Another example image
-├── Script.js                # JavaScript logic for managing products, cart, and UI behavior
-└── README.md                # This file
+│   ├── product_1.jpg        # Example product image
+│   ├── product_2.jpg        # Another example image
+│   └── .............	     # All Images
+└── Script.js                # JavaScript logic for managing products, cart, and UI behavior
 ```
 
 ---

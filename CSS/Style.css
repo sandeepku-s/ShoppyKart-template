@@ -654,6 +654,7 @@ header {
     margin: 0 auto;
     border-radius: var(--border-radius);
 }
+
 #new_product_panel_div #new_product_panel {
     width: 246px;
     height: 80px;
