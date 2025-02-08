@@ -6,7 +6,6 @@ Welcome to the **ShoppyKart Website** – a seamless and dynamic platform where 
 
 ## 📸 Preview  
 ### 🛍️ **Page Preview**  
-![Page preview](Images/page_preview.jpg)  
 [![Page preview](Images/page_preview.jpg)](https://drive.google.com/file/d/1EvHYpvCXXG8TnoQ2Fj8F63OzDhFME1nQ/view?usp=drive_link)
 ### 🛒 **Cart Page Window**  
 ![Cart page window](Images/cart.png)  
