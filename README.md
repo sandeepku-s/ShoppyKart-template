@@ -4,14 +4,22 @@ Welcome to the **ShoppyKart Website** – a seamless and dynamic platform where 
 
 ---
 
-## 📸 Preview
-[![Page preview](Images/page_perview.png)](https://drive.google.com/file/d/1EvHYpvCXXG8TnoQ2Fj8F63OzDhFME1nQ/view?usp=drive_link)
-![Cart page preview](Images/cart.png)
-![Checkout](Images/checkout.png)
-![Product information page](Images/product_information.png)
-![Display the Video](Images/display_video.png)
-![Display the Map](Images/map.png)
-![Add the Product](Images/add_product.png)
+## 📸 Preview  
+### 🛍️ **Page Preview**  
+![Page preview](Images/page_preview.jpg)  
+[![Page preview](Images/page_preview.jpg)](https://drive.google.com/file/d/1EvHYpvCXXG8TnoQ2Fj8F63OzDhFME1nQ/view?usp=drive_link)
+### 🛒 **Cart Page Window**  
+![Cart page window](Images/cart.png)  
+### 💳 **Checkout Window Notification**  
+![Checkout window](Images/checkout.png)  
+### 🏷️ **Product Information Window**  
+![Product information window](Images/product_information.png)  
+### 🎥 **Video Window**  
+![Video window](Images/display_video.png)  
+### 🗺️ **Map Window**  
+![Map window](Images/map.png)  
+### ➕ **Add the Product Window**  
+![Add the Product window](Images/add_product.png)
 
 ---
 
