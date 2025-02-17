@@ -144,7 +144,7 @@ function addProduct()
 
     if (!productImgPath || !productName || !productRating || !productPrice || !discountPrice)
     {
-        alert("Please fill in all fields");
+        swal(`Please fill in all fields`,``,`warning`);
         return;
     }
 
@@ -157,17 +157,20 @@ function addProduct()
 
     localStorage.setItem("products_details", JSON.stringify(products));
 
-    clearFields();
+    clearFields(productName);
     displayProducts();
 }
 
-function clearFields()
+function clearFields(product_Name)
 {
+    swal(`${product_Name} Added`,`Product Added Successfully`,`success`);
     document.getElementById("prdc_name_path").value = "";
     document.getElementById("prdc_name").value = "";
     document.getElementById("prdc_rating").value = "";
     document.getElementById("prdc_org_price").value = "";
     document.getElementById("prdc_dis_price").value = "";
+
+    document.getElementById("overlay").style.display="none";
 }
 
 function displayProducts()
@@ -374,6 +377,7 @@ function checkout()
     document.getElementById("your_cart_section").innerHTML = "NO PRODUCT FOUND";
     document.getElementById("count").innerHTML = 0;
     cartSlno = 0;
+    document.getElementById("overlay").style.display = "none";
 }
 // ******************************************************** /ADD TO CART ********************************************************
 // ======================================================== /PRODUCT SECTION ========================================================
