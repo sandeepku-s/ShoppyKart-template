@@ -1020,6 +1020,10 @@ header {
     border-radius: var(--border-radius);
 }
 
+#product_details #video_window {
+    padding-left: 130px;
+}
+
 /* ******************************************************** ADD THE PRODUCT ******************************************************** */
 #product_details #product_info_div {
     width: 700px;
