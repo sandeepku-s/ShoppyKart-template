@@ -47,7 +47,7 @@ Welcome to the **ShoppyKart Website** – a seamless and dynamic platform where 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/sandeepku-s/ShoppyKart-template
+   git clone https://github.com/sandeepku-s/ShoppyKart-template.git
    ```
 2. Navigate to the project directory:
    ```bash
